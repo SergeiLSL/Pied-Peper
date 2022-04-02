@@ -1,0 +1,189 @@
+//====================================================================================================
+.inet {
+	padding-top: rem(84);
+	color: #fff;
+	font-weight: 500;
+	line-height: math.div(84, 72);
+	&__container {
+		padding: 0;
+		max-width: rem(1219);
+		margin: 0 auto;
+	}
+	&__content {
+		position: relative;
+		img {
+			vertical-align: middle;
+			width: 100%;
+			flex: 1 0 100%;
+			/*разрешаем увеличиваться и запрещаем уменьшаться картитнке*/
+		}
+	}
+	// .proba__text
+	&__text {
+		position: absolute;
+		background: rgba(0, 0, 0, 0);
+		width: 100%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		@include adaptiveValue("font-size", 72, 36);
+	}
+}
+//====================================================================================================
+.problem {
+	background-color: #eeeeee;
+	@include adaptiveValue("padding-top", 48, 30);
+	@include adaptiveValue("padding-bottom", 92, 30);
+	// .problem__container
+	&__container {
+	}
+	// .problem__content
+	&__content {
+	}
+	// .problem__body
+	&__body {
+	}
+	// .problem__title
+	&__title {
+	}
+	// .problem__text
+	&__text {
+	}
+}
+//=================================================================
+//=====================================================================
+.hero {
+	color: #fff;
+	font-weight: 500;
+	line-height: math.div(84, 72);
+	&__container {
+		padding: 0;
+		max-width: rem(1219);
+		margin: 0 auto;
+	}
+	&__content {
+		position: relative;
+		img {
+			vertical-align: middle;
+			width: 100%;
+			flex: 1 0 100%;
+			/*разрешаем увеличиваться и запрещаем уменьшаться картитнке*/
+		}
+	}
+	&__text {
+		position: absolute;
+		background: rgba(0, 0, 0, 0);
+		width: 100%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		@include adaptiveValue("font-size", 48, 18);
+		@include adaptiveValue("padding-left", 163, 20);
+		@include adaptiveValue("padding-right", 163, 20);
+	}
+}
+
+//==============================================================
+//========================================================================================================================================================
+//++++++++++++++
+.ippc {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 48, 30);
+	@include adaptiveValue("padding-bottom", 92, 30);
+	// .ippc__container
+	&__container {
+	}
+	// .ippc__content
+	&__content {
+	}
+	// .ippc__title
+	&__title {
+	}
+	// .ippc__circle
+	&__circle {
+		float: left;
+		shape-outside: circle(50%);
+		width: rem(115);
+		height: rem(115);
+		@include adaptiveValue("margin-right", 48, 20);
+		@include adaptiveValue("margin-bottom", 25, 0);
+	}
+}
+//================================================================
+.team {
+	background-color: #eeeeee;
+	@include adaptiveValue("padding-top", 48, 30);
+	@include adaptiveValue("padding-bottom", 65, 10);
+	// .team__container
+	&__container {
+	}
+	// .team__title
+	&__title {
+	}
+	// .team__row
+	&__row {
+		display: flex;
+		margin: 0px rem(-15);
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	// .team__column
+	&__column {
+		padding: 0 rem(15);
+		flex: 0 1 33.333%;
+		display: flex;
+		/*колонки становятся одинаковые по высоте - по самой высокой*/
+		margin-bottom: rem(20);
+		@media (max-width: $tablet) {
+			flex: 0 1 50%;
+			width: 100%;
+			margin-bottom: rem(40);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 1 100%;
+			width: 100%;
+		}
+	}
+	// .team__item
+	&__item {
+		margin: 0 auto;
+		padding: 24px 0px 28px 0px;
+		text-align: center;
+	}
+	// .team__image
+	&__image {
+		margin: 0px 0px 12px 0px;
+		/*отступ name от img */
+		text-align: center;
+		height: 168px;
+		width: 168px;
+		border-radius: 50%;
+		img {
+			width: 100%;
+		}
+		@media (max-width: $tablet) {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .team__name
+	&__name {
+		font-size: rem(24);
+		line-height: math.div(28, 24);
+		font-weight: 600;
+		color: $mainColorText;
+		margin-bottom: rem(2);
+		//text-align: center;
+	}
+	// .team__position
+	&__position {
+		font-style: italic;
+		font-size: rem(18);
+		line-height: math.div(21, 18);
+		color: #000;
+		//text-align: center;
+	}
+}

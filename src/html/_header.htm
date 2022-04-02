@@ -1,0 +1,23 @@
+<!--? Скрытие навигационной полосы header при прокрутке вниз-->
+<!--? Добавитть в файле header.htm id="navbar" (<header id="navbar" data-lp class="header">)-->
+<!--? Прокрутка при открытом меню бургера код дежит в файле script.js-->
+
+<header id="navbar" data-lp class="header">
+	<div class="header__container ">
+		<a href="" class="header__logo"><img src="@img/header/vector.png" alt="logo"></a>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list">
+						<!--? time 26:00 смотрим https://www.youtube.com/watch?v=zs1r8yafTE8-->
+						<!--? для плавного перехода по ссылкам создадим класс data-goto-->
+						<!--? ЧИАТАЕМ ДОКУМЕНТАЦИЮ ЧЕРТОГОВ ВНИМАТЕЛЬНО.txt-->
+						<!--? Раскоментировать в файле app.js пункты 153 и 159.txt-->
+					<li><a data-goto-header data-goto=".problem" href="#" class="menu__link">the problem</a></li>
+					<li><a data-goto-header data-goto=".ippc" href="#" class="menu__link">PiedPiperCoin</a></li>
+					<li><a data-goto-header data-goto=".team" href="#" class="menu__link menu__link_3">the team</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="menu__icon icon-menu"><span></span></div>
+	</div>
+</header>

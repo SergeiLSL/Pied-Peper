@@ -1,0 +1,189 @@
+//====================================================================================================
+
+.header {
+	background-color: $mainColorText;
+	@include adaptiveValue("padding-top", 19, 19);
+	@include adaptiveValue("padding-bottom", 19, 19);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	// .header__container
+	&__container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		//border: 1px solid green;
+	}
+	// .header__content
+	&__content {
+	}
+	// .header__logo
+	&__logo {
+		//border: 1px solid blue;
+		position: relative;
+		z-index: 5;
+		width: rem(184);
+		height: rem(45);
+		padding-right: rem(150);
+	}
+	// .header__menu
+	&__menu {
+		//@include adaptiveValue("margin-right", 80, 50);
+		justify-content: flex-end;
+		//flex: 0 1 auto;
+	}
+}
+
+.menu {
+	flex: 1 1 auto;
+	// .menu__icon
+	&__icon {
+		//чтобы заработало бургер, скроем menu icon
+		display: none;
+	}
+	// .menu__body
+	&__body {
+
+	}
+	// .menu__list
+	&__list {
+		color: #fff;
+		justify-content: flex-end;
+		> li {
+			position: relative;
+			//@include adaptiveValue("margin-left", 80, 40);
+		}
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			> li {
+				// эти отступы сверху/снизу расширяют область наведения мыши
+				padding: rem(10) 0;
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		font-size: rem(24);
+		line-height: math.div(28, 24);
+		font-weight: 500;
+		padding: 0 rem(8);
+		border-right: rem(3) solid #fff;
+		@include adaptiveValue("font-size", 24, 14);
+		&_3 {
+			border: none;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+//========================================================================================================================================================
+// меню бургер будет создаваться только при этой ширине $mobile
+//==============================================================
+@media (max-width: $mobile) {
+	.menu__icon {
+		display: block;
+		z-index: 5;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+		&::before,
+		&::after {
+			content: "";
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			// добавляем среднюю полоску
+			top: 50%;
+			transform: scale(1) translate(0, -50%);
+			//top: calc(50% - rem(1)); // заменяет эти две записи
+		}
+	}
+
+	.menu__icon._active span {
+		// убираем среднюю полоску при классе _active
+		transform: scale(0) translate(0, -50%);
+	}
+
+	.menu__icon._active::before {
+		// поворачиваем верхнюю полоску при классе _active
+		top: 50%;
+		transform: rotate(-45deg) translate(0, -50%);
+	}
+
+	.menu__icon._active::after {
+		// поворачиваем нижнюю полоску при классе _active
+		bottom: 50%;
+		transform: rotate(45deg) translate(0, 50%);
+	}
+
+	// по идее сверху это закоментированный код бургера
+	.menu__body {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		//color: #000;
+		background-color: $mainColorText;
+		padding: rem(200) rem(30) rem(30) rem(30);
+		text-align: start;
+		padding-left: 30%;
+		transition: left 0.3s ease 0s; // убираем за экран влево
+		overflow: auto; // щбязательно добавить, чтобы появлялся скролл, если меню не будет помещаться на экране
+	}
+
+	.menu__body._active {
+		left: 0%;
+	}
+
+	.menu__body::before {
+		// чтобы меню уходило под плашку header
+		content: "";
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: rem(70);
+		//background-color: #912105;
+		z-index: 2;
+	}
+
+	.menu__list > li {
+		//flex-wrap: wrap;
+		margin: 0 0 rem(40) 0;
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.menu__list > li._active .menu__sub-list {
+		display: block;
+	}
+	.menu__link {
+		font-size: rem(30);
+		border: none;
+	}
+}
+//==============================================================
+// финиш меню бургер
+//==============================================================

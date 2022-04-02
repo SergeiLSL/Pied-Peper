@@ -1,0 +1,11 @@
+[data-showmore-button] span:last-child {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span:last-child {
+  display: block;
+}

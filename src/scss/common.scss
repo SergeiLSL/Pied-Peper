@@ -1,0 +1,29 @@
+// Заголовки, общие БЄМ блоки и проче...
+._container {
+	//@include adaptiveValue("padding-left", 54.5, 15);
+	//@include adaptiveValue("padding-right", 54.5, 15);
+	//@include adaptiveValue("padding-top", 48, 10);
+	//@include adaptiveValue("padding-bottom", 92, 50);
+}
+
+//===========================================
+// Заголовок секкции
+.title {
+	font-weight: 500;
+	@include adaptiveValue("font-size", 64, 36);	
+	@include adaptiveValue("font-size", 75, 40);
+	text-align: center;
+	color: $mainColorText;
+	@include adaptiveValue("margin-bottom", 32, 15);
+}
+//===========================================
+// Текст в секкции
+p {
+	@include adaptiveValue("font-size", 32, 20);	
+	line-height: math.div(37.5, 32);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 40, 20);
+	}
+}
+
+

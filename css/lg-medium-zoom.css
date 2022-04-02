@@ -1,0 +1,19 @@
+.lg-medium-zoom-item {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.lg-medium-zoom .lg-outer {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.lg-medium-zoom .lg-outer.lg-grab img.lg-object {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.lg-medium-zoom .lg-outer.lg-grabbing img.lg-object {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}

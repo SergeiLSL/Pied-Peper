@@ -1,0 +1,63 @@
+.spollers {
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+}
+
+.spollers__item {
+  font-size: rem(20);
+}
+
+.spollers__title {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  border: 1px solid #eee;
+  padding: rem(10) rem(15);
+  border-radius: rem(5);
+  position: relative;
+}
+
+._spoller-init .spollers__title {
+  cursor: pointer;
+}
+
+._spoller-init .spollers__title::before, ._spoller-init .spollers__title::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background-color: #000;
+  height: 2px;
+  width: 15px;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+._spoller-init .spollers__title::before {
+  -webkit-transform: translate(-75%, -50%) rotate(40deg);
+          transform: translate(-75%, -50%) rotate(40deg);
+}
+
+._spoller-init .spollers__title::after {
+  -webkit-transform: translate(0, -50%) rotate(-40deg);
+          transform: translate(0, -50%) rotate(-40deg);
+}
+
+._spoller-init .spollers__title._spoller-active::before {
+  -webkit-transform: translateX(-75%) rotate(-40deg);
+          transform: translateX(-75%) rotate(-40deg);
+}
+
+._spoller-init .spollers__title._spoller-active::after {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.spollers__body {
+  padding: rem(20);
+  border-radius: rem(5);
+  border: 1px solid #eee;
+}
