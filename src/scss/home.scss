@@ -1,24 +1,27 @@
 //====================================================================================================
 .inet {
+	position: relative;
+	margin: 0 auto;
 	padding-top: rem(84);
 	color: #fff;
 	font-weight: 500;
 	line-height: math.div(84, 72);
-	&__container {
-		padding: 0;
-		max-width: rem(1219);
-		margin: 0 auto;
-	}
-	&__content {
+	// .contacts__foto
+	&__foto {
 		position: relative;
-		img {
-			vertical-align: middle;
-			width: 100%;
-			flex: 1 0 100%;
-			/*разрешаем увеличиваться и запрещаем уменьшаться картитнке*/
-		}
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		background-repeat: no-repeat;
+		text-align: center;
 	}
-	// .proba__text
+	// .contacts__image
+	&__image {
+		width: 100%;
+	}
+	// .contacts__text
 	&__text {
 		position: absolute;
 		background: rgba(0, 0, 0, 0);
@@ -54,23 +57,27 @@
 //=================================================================
 //=====================================================================
 .hero {
+	position: relative;
+	margin: 0 auto;
 	color: #fff;
 	font-weight: 500;
 	line-height: math.div(84, 72);
-	&__container {
-		padding: 0;
-		max-width: rem(1219);
-		margin: 0 auto;
-	}
-	&__content {
+	// .contacts__foto
+	&__foto {
 		position: relative;
-		img {
-			vertical-align: middle;
-			width: 100%;
-			flex: 1 0 100%;
-			/*разрешаем увеличиваться и запрещаем уменьшаться картитнке*/
-		}
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		background-repeat: no-repeat;
+		text-align: center;
 	}
+	// .contacts__image
+	&__image {
+		width: 100%;
+	}
+	// .contacts__text
 	&__text {
 		position: absolute;
 		background: rgba(0, 0, 0, 0);
@@ -84,7 +91,6 @@
 		@include adaptiveValue("padding-right", 163, 20);
 	}
 }
-
 //==============================================================
 //========================================================================================================================================================
 //++++++++++++++
@@ -111,6 +117,10 @@
 		@include adaptiveValue("margin-bottom", 25, 0);
 	}
 }
+//========================================================================================================================================================
+//===== start contact =======================
+
+//===== finish contact =======================
 //================================================================
 .team {
 	background-color: #eeeeee;

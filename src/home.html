@@ -8,14 +8,16 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="inet">
-				<div class="inet__container">
-					<div class="inet__content">
-						<img src="@img/inet/stars.jpg" alt="stars">
+			<section data-watch="navigator" class="inet">
+				<div class="inet__foto">
+					<picture>
+						<source srcset="@img/inet/stars-big.jpg" type="image/jpeg" media="(min-width: 1219px)">
+						<source srcset="@img/inet/stars.jpg" type="image/jpeg" media="(max-width: 1219px)">
+						<img src="@img/inet/stars.jpg" class="hero__image" alt="cover">
 						<div class="inet__text">
 							PiperNet Is Here
 						</div>
-					</div>
+					</picture>
 				</div>
 			</section>
 			<section data-watch="navigator" class="problem">
@@ -45,15 +47,17 @@
 					</div>
 				</div>
 			</section>
-			<section class="hero">
-				<div class="hero__container">
-					<div class="hero__content">
-						<img src="@img/hero/stars.jpg" alt="stars">
+			<section data-watch="navigator" class="hero">
+				<div class="hero__foto">
+					<picture>
+						<source srcset="@img/hero/hero-big.jpg" type="image/jpeg" media="(min-width: 1219px)">
+						<source srcset="@img/hero/hero.jpg" type="image/jpeg" media="(max-width: 1219px)">
+						<img src="@img/hero/hero.jpg" class="hero__image" alt="cover">
 						<div class="hero__text">
 							We’re in this together! All of our computers and phones join in a
 							network to make the strongest supercomputer the world has ever seen
 						</div>
-					</div>
+					</picture>
 				</div>
 			</section>
 			<section data-watch="navigator" class="ippc">
@@ -62,11 +66,9 @@
 						<div class="ippc__title title">
 							Introducing PiedPiperCoin
 						</div>
-
 						<img src="img/ippc/logo.png" alt="logo" class="ippc__circle">
-
 						<p>Pied Piper's new internet is built <span>for users, by users</span>.<br>
-							You supply the storage, compute, and networking resources that power our entire
+							You supply the storage, compute, and netheroing resources that power our entire
 							decentralized web.
 						</p>
 						<p>
@@ -80,6 +82,7 @@
 						</p>
 					</div>
 				</div>
+			</section>
 			</section>
 			<section data-watch="navigator" class="team">
 				<div class="team__container">
