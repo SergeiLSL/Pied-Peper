@@ -2,8 +2,7 @@
 
 .header {
 	background-color: $mainColorText;
-	@include adaptiveValue("padding-top", 19, 19);
-	@include adaptiveValue("padding-bottom", 19, 19);
+	padding: rem(19) 0;
 	position: fixed;
 	top: 0;
 	left: 0;
