@@ -1,8 +1,8 @@
 {
-	"name": "lsl-start",
+	"name": "fls-start",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
-	"author": "LSL",
+	"author": "FLS",
 	"private": true,
 	"license": "",
 	"type": "module",
